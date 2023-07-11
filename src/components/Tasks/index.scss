@@ -94,6 +94,10 @@ table.tftable {
           transition: 500ms ease;
           border: 2px solid $color-header;
         }
+
+        &:checked{
+          background-color: #24901F;
+        }
       }
       img {
         cursor: pointer;

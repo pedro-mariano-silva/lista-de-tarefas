@@ -1,8 +1,13 @@
+var med=[];
+var imgElement=document.querySelector('td');
+
 import "./index.scss";
 import edit from "../../assets/edit.png";
 import excluir from "../../assets/excluir.png";
 
 import { useState } from "react";
+
+
 
 export default function Tasks({ data }) {
   const [showModalEdit, setShowModalEdit] = useState(false);
@@ -22,6 +27,33 @@ export default function Tasks({ data }) {
     setShowModalTrash(true);
   };
 
+
+  function addTarefa(){
+    event.preventDefault();
+    let newTarefa={ 
+      "containerTable":document.getElementById("containerTable").value
+      
+    }
+  }
+
+  console.log(addTarefa.length);
+  for(let i=0; i< addTarefa.length; i++ ){
+  table.innerHTML = table.innerHTML  +  `<tr>
+  <td>${i}</td>
+  <td>${tarefa[i].tarefa}</td>
+  <td>${tarefa[i].status}</td>
+  <td>${tarefa[i].opcao}</td>
+  
+  </tr>`
+  
+  
+
+  }
+
+
+
+
+
   return (
     <div className="containerTable">
       <table
@@ -33,15 +65,15 @@ export default function Tasks({ data }) {
         }}
       >
         <tr>
-          <th>Tarefa</th>
-          <th>Status</th>
-          <th>Opções</th>
+          <th id="tarefa">Tarefa</th>
+          <th id="status">Status</th>
+          <th id="opcao">Opções</th>
         </tr>
         {data.map((obj) => (
           <tr key={obj.id}>
             <td className="tr__td">{obj.title}</td>
             <td className="check">
-              <input type="checkbox" checked={obj.completed} />
+              <input type="checkbox" checked={obj.false} />
             </td>
             <td>
               <img
@@ -72,19 +104,24 @@ export default function Tasks({ data }) {
             >
               <h2>X</h2>
             </div>
+            
+            
             <h1>Deseja adicionar uma tarefa?</h1>
+            
             <label>
               <input type="text" placeholder="Digite o nome tarefa..." />
             </label>
-            <div className="modal__containerNew__content__buttons">
+            <div  className="modal__containerNew__content__buttons">
               <button className="no" onClick={() => setShowModalNew(false)}>
                 Não
               </button>
-              <button className="yes">Sim</button>
+              <button class="submit-button" type="submit" className="yes">Sim</button>
+              
             </div>
           </div>
-        </div>     
-
+          
+        </div> 
+        
       )}
 
 

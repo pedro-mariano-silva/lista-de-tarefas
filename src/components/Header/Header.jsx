@@ -7,6 +7,8 @@ export default function Header() {
         <ul className="container__ul">
           <li className="container__li">Organização</li>
           <li className="container__li">Tarefas</li>
+          <li className="container__li">Gastos</li>
+
         </ul>
       </nav>
     </header>

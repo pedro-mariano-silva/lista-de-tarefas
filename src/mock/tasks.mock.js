@@ -12,5 +12,30 @@ export const DB = [
     description: "Resposta a e-mails de trabalho e pessoais.",
     completed: true,
   },
+  {
+    id: 3,
+  title: "Levar o cachorro para passear",
+  description: "Levar o pet para as necessidades.",
+  completed: true,
+},
+
+{
+  id: 4,
+title: "Compras básicas",
+description: "legumes, frutas etc.",
+completed: false,
+},
+
+{
+id: 6,
+title: "Manutenção na bicilceta",
+description: "Revisão na bike.",
+completed: false,
+},
+
+
+
+
+  
 
   ];
